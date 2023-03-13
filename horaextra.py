@@ -1,8 +1,8 @@
-import datetime
 import getpass
 import time
 
 import pandas as pd
+from momento import Momento as mo
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -44,22 +44,16 @@ driver.find_element(
         "221" + Keys.ENTER)
 
 # Registrar Lote
-year = int(datetime.datetime.now().year)
-month = int(datetime.datetime.now().month)
+year = mo.anoja()
+month = mo.mesja()
 
 driver.switch_to.frame("DF")
-if month < 10:
-    driver.find_element(
-        By.XPATH, "/html/body/form/table[1]/tbody/tr[1]/td[2]/input").send_keys(
-            f"{year}/0{month}NB-HE160")
-else:
-    driver.find_element(
-        By.XPATH, "/html/body/form/table[1]/tbody/tr[1]/td[2]/input").send_keys(
-            f"{year}/{month}NB-HE160")
-
+driver.find_element(
+    By.XPATH, "/html/body/form/table[1]/tbody/tr[1]/td[2]/input").click()
 driver.find_element(
     By.XPATH, "/html/body/form/table[1]/tbody/tr[1]/td[2]/input").send_keys(
         f"{year}/{month}NB-HE160")
+
 time.sleep(1)
 driver.find_element(
     By.XPATH, '//*[@id="Anchor3"]').click()
@@ -82,11 +76,11 @@ driver.switch_to.frame("DF")
 tabela = pd.read_excel("HORAEXTRA.xls", sheet_name="HE")
 for i, matricula in enumerate(tabela["matricula"]):
     horaextra1 = tabela.loc[i, "horaextra"]
-    horaextra = int(horaextra1)
+    horaextra = str(horaextra1)
     # Registrar conteudo da ocorrencia
     # Registrar Carga Horaria
     d = 2
-    time.sleep(0.5)
+    # time.sleep(0.5)
     # print(f"Em i = {i} teve que esperar 0.5 segundos")
     driver.find_element(
         By.XPATH, f"/html/body/form/table[2]/tbody/tr[{c}]/td[{d}]/input").click()
@@ -94,7 +88,7 @@ for i, matricula in enumerate(tabela["matricula"]):
         By.XPATH, f"/html/body/form/table[2]/tbody/tr[{c}]/td[{d}]/input").send_keys(
             matricula)
     d += 2
-    time.sleep(0.5)
+    # time.sleep(0.5)
     # print(f"Em i = {i} teve que esperar 0.5 segundos")
     driver.find_element(
         By.XPATH, f"/html/body/form/table[2]/tbody/tr[{c}]/td[{d}]/input").click()
@@ -105,16 +99,23 @@ for i, matricula in enumerate(tabela["matricula"]):
     linha += 1
     if c == 18:
         c = c - 13
-        # ENTREGA PARA A ULTIMA LINHA DE TRABALHO REALIZADA
+        # BOTÃO EXECUTAR PARA VALIDAR TODAS AS INCERÇOES.
+        driver.find_element(
+            By.XPATH, "/html/body/form/table[4]/tbody/tr/td/input").click()
+        # ACESSAR O FRAME CORRETO
+        time.sleep(1.5)
+        driver.switch_to.frame("DF")
+        # INCERIR O VALOR DA LINHA FINAL PARA ACESSAR A PRÓXIMA PÁGINA.
         driver.find_element(
             By.XPATH, "/html/body/form/table[3]/tbody/tr[2]/td[2]/input").click()
+        # driver.switch_to.frame("DF")
         driver.find_element(
             By.XPATH, "/html/body/form/table[3]/tbody/tr[2]/td[2]/input").send_keys(linha)
 
-        # Buton Executa.
+        # Buton Executa.  /html/body/form/table[4]/tbody/tr/td/input
         driver.find_element(
             By.XPATH, "/html/body/form/table[4]/tbody/tr/td/input").click()
-        # time.sleep(1.5)
+        time.sleep(1.5)
 
         # wait.until(driver.find_element(By.TAG_NAME, "DF"))
         driver.switch_to.frame("DF")
