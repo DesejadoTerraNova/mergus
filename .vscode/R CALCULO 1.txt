@@ -1,0 +1,27 @@
+214
+DF
+CALCULO 1
+//*[@id="Anchor3"]
+
+DF
+MATRICULA
+/html/body/form/table[3]/tbody/tr[2]/td[2]/input
+ESTORNO DE CALCULO
+/html/body/form/table[3]/tbody/tr[5]/td[2]/select
+SIM
+/html/body/form/table[3]/tbody/tr[5]/td[2]/select/option[2]
+ONLINE
+/html/body/form/table[4]/tbody/tr[3]/td[1]/input
+EXECUTAR
+/html/body/form/table[6]/tbody/tr/td/input
+
+CASO APRESENTE
+DF
+EXECUTAR
+/html/body/form/table[3]/tbody/tr/td/input
+
+DF
+PROXIMA MATRICULA
+/html/body/form/table[1]/tbody/tr[2]/td[2]/input
+EXECUTAR
+/html/body/form/table[2]/tbody/tr/td/input

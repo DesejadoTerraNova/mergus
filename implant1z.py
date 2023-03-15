@@ -1,23 +1,10 @@
-import getpass
+from navegar import abrir_p as driver
 import time
-
 import pandas as pd
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-# from selenium.webdriver.edge.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
 
-# geckodriver_autoinstaller.install()
 
-loginup = input("NickName >  ")
-keykey = getpass.getpass("Palavra passe >  ")
-
-# Acessar o MERGUS
-# driver = Firefox()
-driver = webdriver.Chrome()
-driver.get("http://mergus.recife:8080/hr3411/awi/obj?objid=")
-# Efetuar log on no portal. Botão para logar
-# wait.until(expected_conditions.alert_is_present())
 driver.find_element(
     by=By.XPATH, value='//*[@id="opcoes"]/table/tbody/tr[1]/td/a/img').click()
 
@@ -25,22 +12,6 @@ driver.find_element(
 def click_entrega(ender, conteudo):
     driver.find_element(By.XPATH, ender).click()
     driver.find_element(By.XPATH, ender).send_keys(conteudo)
-
-
-# Campo usuario
-
-driver.switch_to.frame("DF")
-
-driver.find_element(
-    By.XPATH, '/html/body/form/table[2]/tbody/tr[2]/td[2]/input').click()
-driver.find_element(
-    By.XPATH, '/html/body/form/table[2]/tbody/tr[2]/td[2]/input').send_keys(loginup)
-driver.find_element(
-    By.XPATH, '/html/body/form/table[2]/tbody/tr[3]/td[2]/input').click()
-driver.find_element(
-    By.XPATH, '/html/body/form/table[2]/tbody/tr[3]/td[2]/input').send_keys(
-        keykey + Keys.ENTER)
-# driver.find_element(By.XPATH, '/html/body/form/table[4]/tbody/tr/td/input').click()
 
 # Acessar 1Z
 time.sleep(1)

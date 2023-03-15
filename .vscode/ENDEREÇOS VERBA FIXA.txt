@@ -1,0 +1,72 @@
+DF
+LOCAL MATRICULA DO COMANDO 112
+/html/body/form/table[1]/tbody/tr/td[2]/input
+LOCAL DA VERBA FIXA
+//*[@id="Anchor51"]
+VERBA FIXA 1
+/html/body/form/table[3]/tbody/tr[3]/td[1]/input
+REFERENCIA 1
+/html/body/form/table[3]/tbody/tr[3]/td[2]/input
+VALOR 1
+/html/body/form/table[3]/tbody/tr[3]/td[3]/input
+DIA 1.1
+/html/body/form/table[3]/tbody/tr[3]/td[5]/input
+MES 1.1
+/html/body/form/table[3]/tbody/tr[3]/td[7]/input
+ANO 1.1
+/html/body/form/table[3]/tbody/tr[3]/td[9]/input
+DIA 1.2
+/html/body/form/table[3]/tbody/tr[3]/td[10]/input
+MES 1.2
+/html/body/form/table[3]/tbody/tr[3]/td[12]/input
+ANO 1.2
+/html/body/form/table[3]/tbody/tr[3]/td[14]/input
+
+VERBA 16
+/html/body/form/table[3]/tbody/tr[18]/td[1]/input
+REFERENCIA 16
+/html/body/form/table[3]/tbody/tr[18]/td[2]/input
+VALOR 16
+/html/body/form/table[3]/tbody/tr[18]/td[3]/input
+DIA 16.1
+/html/body/form/table[3]/tbody/tr[18]/td[5]/input
+MES 16.1
+/html/body/form/table[3]/tbody/tr[18]/td[7]/input
+ANO 16.1
+/html/body/form/table[3]/tbody/tr[18]/td[9]/input
+DIA 16.2
+/html/body/form/table[3]/tbody/tr[18]/td[10]/input
+MES 16.2
+/html/body/form/table[3]/tbody/tr[18]/td[12]/input
+ANO 16.2
+/html/body/form/table[3]/tbody/tr[18]/td[14]/input
+
+DF
+PROXIMA MATRICULA
+/html/body/form/table[4]/tbody/tr[2]/td[2]/input
+EXECUTAR
+/html/body/form/table[5]/tbody/tr/td/input
+DIA VAKIDADE
+/html/body/form/table[1]/tbody/tr[1]/td[2]/input
+MES VALIDADE
+/html/body/form/table[1]/tbody/tr[1]/td[4]/input
+ANO VALIDADE
+/html/body/form/table[1]/tbody/tr[1]/td[6]/input
+MOTIVO
+/html/body/form/table[1]/tbody/tr[2]/td[2]/input
+EMBASAMENTO
+/html/body/form/table[1]/tbody/tr[3]/td[2]/input
+DIA DOM
+/html/body/form/table[1]/tbody/tr[4]/td[2]/input
+MES DOM
+/html/body/form/table[1]/tbody/tr[4]/td[4]/input
+ANO DOM
+/html/body/form/table[1]/tbody/tr[4]/td[6]/input
+DIA APLIABILIDADE
+/html/body/form/table[1]/tbody/tr[5]/td[2]/input
+MES APLICABILIDADE
+/html/body/form/table[1]/tbody/tr[5]/td[4]/input
+ANO APLICABILIDADE
+/html/body/form/table[1]/tbody/tr[5]/td[6]/input
+EXECUTAR
+/html/body/form/table[2]/tbody/tr/td/input
