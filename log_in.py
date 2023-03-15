@@ -30,16 +30,4 @@ def guia():
         By.XPATH, '/html/body/form/table[2]/tbody/tr[3]/td[2]/input').send_keys(
             keykey + Keys.ENTER)
 def sai():
-    driver.switch_to.frame("FF")
-    wait = WebDriverWait(driver, timeout=10, poll_frequency=1, ignored_exceptions=[NoSuchElementException])
-    # element = wait.until(EC.element_to_be_clickable((By.XPATH, "//div")))
-    if driver.find_element(By.XPATH, '/html/body/form/table[2]/tbody/tr[6]/td/a') == True:
-        driver.find_element(By.XPATH, '/html/body/form/table[2]/tbody/tr[6]/td/a').click()
-        time.sleep(0.5)
-        driver.switch_to.frame("DF")
-        driver.find_element(By.XPATH, '//*[@id="Anchor4"]').click()
-    else:
-        driver.find_element(By.XPATH, '/html/body/form/table[2]/tbody/tr[7]/td/a').click()
-        time.sleep(0.5)
-        driver.switch_to.frame("DF")
-        driver.find_element(By.XPATH, '//*[@id="Anchor4"]').click()
+    driver.close()
