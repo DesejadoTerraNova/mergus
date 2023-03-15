@@ -153,7 +153,10 @@ for i, matricula in enumerate(tabela["matricula"]):
     # driver.switch_to.frame("DF")
     click_entrega('/html/body/form/table[3]/tbody/tr[3]/td[12]/input', ano2)
     # Linha 01
-    # driver.switch_to.frame("DF")
+    # A INCERÇÃO P/ AS LINHAS APRESENTOU COMPORTAMENTO DE QUANDO SUPERAR O LIMITE
+    # DEFINIDO PELO SITE ELE RESERVA OS DEMAIS CARACTERES PARA A APRÓXIMA LINHA, 
+    # EMPURRANDO A COLETA PROSTERIOR PARA FRENTE, MESMO QUE A PRÓXIMA VARIÁVEL POSSUA CONTEÚDO
+    # PARA SEREM INCERIDOS.
     click_entrega('/html/body/form/table[4]/tbody/tr[2]/td[2]/input', linha1)
     # Linha 02
     # driver.switch_to.frame("DF")
