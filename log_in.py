@@ -1,17 +1,17 @@
-import getpass
-import time
+# import getpass
+# import time
 from momento import Momento as mo
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.support.webdriver.wait import WebDriverWait
+# from selenium.support.webdriver.wait import WebDriverWait
 
 
 driver = webdriver.Chrome()
 driver.get("http://mergus.recife:8080/hr3411/awi/obj?objid=")
-def guia():
-    loginup = input("NickName >  ")
-    keykey = getpass.getpass("Palavra passe >  ")
+def guia(name, keys):
+    loginup = name
+    keykey = keys
     hora = int(mo.horaja())
     if hora <= 12:
         print(f"Bom dia {loginup}...")
