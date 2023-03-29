@@ -7,7 +7,11 @@ import horaextra
 
 name = input("Digite seu nome para logar no sistema: ")
 mykey = getpass.getpass("Digite a chave de entrada: ")
+<<<<<<< HEAD
 hora = int(mo.horaja())
+=======
+
+>>>>>>> b3963a99125423a1a22dc17870daf297958a4a13
 if hora <= 12:
     print(f"Bom dia {name}...")
 elif hora > 12 and hora <= 17:
@@ -19,7 +23,11 @@ else:
 navegar.log_up.abrir_p()
 # Loga na conta digitada em name
 navegar.log_up.logar(name, mykey)
+<<<<<<< HEAD
 
+=======
+hora = int(mo.horaja())
+>>>>>>> b3963a99125423a1a22dc17870daf297958a4a13
 
 fazer = input("1 p/ reg. 1Z, 2 p/ reg. H.E., 3 p/ realizar pesquisa.")
 
